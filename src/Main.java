@@ -12,9 +12,12 @@ public class Main {
         Deck.shuffleDeck(main);
         System.out.println(main);
         System.out.println(main.size());
+        System.out.println("-------------------------------------------------------");
         Deck.dealDeck(main, deck1, deck2);
+        System.out.println(deck1);
+        System.out.println("-------------------------------------------------------");
+        System.out.println(deck2);
+        System.out.println("-------------------------------------------------------");
         Play.playWar(deck1, deck2);
-        
-
     }
 }

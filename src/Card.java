@@ -10,16 +10,6 @@ public class Card {
         this.value = value;
     }
 
-
-
-    public String getRank() {
-        return rank;
-    }
-
-    public String getSuit() {
-        return suit;
-    }
-
     public int getValue() {
         return value;
     }
