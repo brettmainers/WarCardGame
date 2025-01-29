@@ -7,16 +7,16 @@ public class Play {
     public static void playWar(LinkedList<Card> deck1, LinkedList<Card> deck2) {
         while (!deck1.isEmpty() && !deck2.isEmpty()) {
             if (deck1.getLast().getValue() > deck2.getLast().getValue()) {
-                System.out.println("Player 1 plays: " + deck1.getLast().toString());
-                System.out.println("Player 2 plays: " + deck2.getLast().toString());
+                System.out.println("You play a " + deck1.getLast().toString());
+                System.out.println("Player 2 plays a " + deck2.getLast().toString());
                 deck1.addFirst(deck2.removeLast());
-                System.out.println("Player 1 (You) wins this round!");
+                System.out.println("You win this round!");
                 System.out.println("Playing next round...");
              } else if (deck1.getLast().getValue() < deck2.getLast().getValue()) {
-                System.out.println("Player 1 plays: " + deck1.getLast().toString());
-                System.out.println("Player 2 plays: " + deck2.getLast().toString());
+                System.out.println("You play a " + deck1.getLast().toString());
+                System.out.println("Player 2 plays a " + deck2.getLast().toString());
                 deck2.addFirst(deck1.removeLast());
-                System.out.println("Player 2 (CPU) wins this round!");
+                System.out.println("Player 2 wins this round!");
                 System.out.println("Playing next round...");
              } else {
                 System.out.println("It's a tie, go to war!");
@@ -39,14 +39,14 @@ public class Play {
                         tie = false;
                     } else if (p1.getLast().getValue() < p2.getLast().getValue()) {
                         System.out.println("You play 3 cards and flip over the 4th. It is a " + p1.getLast().toString());
-                        System.out.println("Player 6 plays: " + p2.getLast().toString());
-                        System.out.println("Player 2 (CPU) wins this war!");
+                        System.out.println("Player 2 does the same and flips over a " + p2.getLast().toString());
+                        System.out.println("Player 2 wins this war and collects all of the cards played!");
                         deck2.addAll(0,p1);
                         deck2.addAll(0,p2);
                         tie = false;
                     } else if (p1.getLast().getValue() == p2.getLast().getValue()) {
-                        System.out.println("Player 7 plays: " + p1.getLast().toString());
-                        System.out.println("Player 8 plays: " + p2.getLast().toString());
+                        System.out.println("You play 3 cards and flip over the 4th. It is a " + p1.getLast().toString());
+                        System.out.println("Player 2 does the same and flips over a " + p2.getLast().toString());
                         System.out.println("Another tie! Go to war again!");
                         if (deck1.isEmpty() || deck2.isEmpty()) {
                             tie = false;
@@ -56,7 +56,7 @@ public class Play {
             }
         }
         if (deck1.isEmpty()) {
-            System.out.println("Player 1 has run out of cards.");
+            System.out.println("You have run out of cards.");
             System.out.println("Game over, Player 2 wins!");
         } else if (deck2.isEmpty()) {
             System.out.println("Player 2 has run out of cards.");
