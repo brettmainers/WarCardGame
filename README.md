@@ -1,18 +1,1 @@
-## Getting Started
-
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+This program allows the user to play a game of war against the computer. Included in this program are the Card, Deck, and Play classes. The Card class allows us to define the rank, suit, and value of each card. The Deck class allows the creation and shuffle of the main deck, along with the dealing of the cards in the main deck to the two player decks. Finally, the Play class includes all of the game logic and rules, and allows the program to successfully play a game of war.
